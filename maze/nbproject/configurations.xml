@@ -4,7 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>graph/graph.h</itemPath>
+      <itemPath>drawing/grid_drawer.h</itemPath>
+      <itemPath>generation_logic/maze_algorithm.h</itemPath>
       <itemPath>generation_logic/randomized_kruskal.h</itemPath>
+      <itemPath>main_ui/user_prompter.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +17,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>graph/graph.cpp</itemPath>
+      <itemPath>drawing/grid_drawer.cpp</itemPath>
+      <itemPath>main_ui/main.cpp</itemPath>
+      <itemPath>generation_logic/maze_algorithm.cpp</itemPath>
       <itemPath>generation_logic/randomized_kruskal.cpp</itemPath>
+      <itemPath>main_ui/user_prompter.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -38,6 +46,17 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="drawing/grid_drawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="drawing/grid_drawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generation_logic/maze_algorithm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="generation_logic/maze_algorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="generation_logic/randomized_kruskal.cpp"
             ex="false"
             tool="1"
@@ -48,7 +67,15 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="graph/graph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="graph/graph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main_ui/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_ui/user_prompter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_ui/user_prompter.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -71,6 +98,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="drawing/grid_drawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="drawing/grid_drawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generation_logic/maze_algorithm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="generation_logic/maze_algorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="generation_logic/randomized_kruskal.cpp"
             ex="false"
             tool="1"
@@ -81,7 +119,15 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="graph/graph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="graph/graph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main_ui/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_ui/user_prompter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_ui/user_prompter.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

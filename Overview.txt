@@ -1,0 +1,11 @@
+This is a high level overview of the general pipeline of code.
+
+First, there is the main_ui level. This is the group that prompts the user for information regarding desired dimensions of the maze, type of maze algorithm, etc. It includes the main file which connects all the other code together.
+
+The next level is the maze generation logic. Maze_Algorithm is the pure virtual base class for all the maze generation algorithms. All other algorithms should derive this class and implement the generate_maze() function.
+
+The last level is the drawing level. This takes in the graph data structure and draws it out onto the screen, using a currently undecided third party graphics library. 
+
+The graph bubble contains the data structure that represents a maze.
+
+There are some things I have to comment on. There are some intentionally bad design choices. First of all, it would have made more sense to just make a static virtual function that all the maze generation classes would have to implement, instead of doing all the hassle with constructors, etc. But I wanted to gain familiarity with creating a hierarchy of classes in C++.

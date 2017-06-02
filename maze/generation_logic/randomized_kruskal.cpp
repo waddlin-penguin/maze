@@ -10,15 +10,21 @@
  * 
  * Created on June 1, 2017, 3:38 AM
  */
-
 #include "randomized_kruskal.h"
 
-randomized_kruskal::randomized_kruskal() {
+Randomized_Kruskal::Randomized_Kruskal(int arg_width, int arg_length)
+    : Maze_Algorithm(arg_width, arg_length) {
+    width = arg_width;
+    length = arg_length;
 }
 
-randomized_kruskal::randomized_kruskal(const randomized_kruskal& orig) {
+Randomized_Kruskal::Randomized_Kruskal(const Randomized_Kruskal& orig)
+    : Maze_Algorithm(orig) {
 }
 
-randomized_kruskal::~randomized_kruskal() {
+Randomized_Kruskal::~Randomized_Kruskal() {
 }
 
+Graph Randomized_Kruskal::generate_maze() {
+    return Graph();
+}

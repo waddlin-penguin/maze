@@ -5,28 +5,30 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   user_prompter.cpp
  * Author: jonathan
- *
- * Created on June 1, 2017, 3:37 AM
+ * 
+ * Created on June 2, 2017, 6:33 AM
  */
 
+#include "user_prompter.h"
 #include <cstdlib>
 #include <iostream>
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-    int width, length;
-    cout << "Enter desired width: " << endl;
-    cin >> width;
-    cout << "Enter desired length: " << endl;
-    cin >> length;
-    
-    
-    return 0;
+User_Prompter::User_Prompter() {
 }
 
+User_Prompter::User_Prompter(const User_Prompter& orig) {
+}
+
+User_Prompter::~User_Prompter() {
+}
+
+void User_Prompter::initial_prompt(int *width, int *length) {
+    cout << "Enter desired width: " << endl;
+    cin >> *width;
+    cout << "Enter desired length: " << endl;
+    cin >> *length;
+}

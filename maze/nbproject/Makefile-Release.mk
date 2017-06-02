@@ -35,8 +35,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/drawing/grid_drawer.o \
+	${OBJECTDIR}/generation_logic/maze_algorithm.o \
 	${OBJECTDIR}/generation_logic/randomized_kruskal.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/graph/graph.o \
+	${OBJECTDIR}/main_ui/main.o \
+	${OBJECTDIR}/main_ui/user_prompter.o
 
 
 # C Compiler Flags
@@ -63,15 +67,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/maze: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/maze ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/drawing/grid_drawer.o: drawing/grid_drawer.cpp
+	${MKDIR} -p ${OBJECTDIR}/drawing
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/drawing/grid_drawer.o drawing/grid_drawer.cpp
+
+${OBJECTDIR}/generation_logic/maze_algorithm.o: generation_logic/maze_algorithm.cpp
+	${MKDIR} -p ${OBJECTDIR}/generation_logic
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/generation_logic/maze_algorithm.o generation_logic/maze_algorithm.cpp
+
 ${OBJECTDIR}/generation_logic/randomized_kruskal.o: generation_logic/randomized_kruskal.cpp
 	${MKDIR} -p ${OBJECTDIR}/generation_logic
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/generation_logic/randomized_kruskal.o generation_logic/randomized_kruskal.cpp
 
-${OBJECTDIR}/main.o: main.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/graph/graph.o: graph/graph.cpp
+	${MKDIR} -p ${OBJECTDIR}/graph
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/graph/graph.o graph/graph.cpp
+
+${OBJECTDIR}/main_ui/main.o: main_ui/main.cpp
+	${MKDIR} -p ${OBJECTDIR}/main_ui
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_ui/main.o main_ui/main.cpp
+
+${OBJECTDIR}/main_ui/user_prompter.o: main_ui/user_prompter.cpp
+	${MKDIR} -p ${OBJECTDIR}/main_ui
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_ui/user_prompter.o main_ui/user_prompter.cpp
 
 # Subprojects
 .build-subprojects:
