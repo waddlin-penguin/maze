@@ -13,7 +13,20 @@
 
 #include "graph.h"
 
-Graph::Graph() {
+Node::Node() {
+    
+}
+
+Node::Node(const Node& orig) {
+    
+}
+
+Node::~Node() {
+    
+}
+
+Graph::Graph(int width, int length) {
+    
 }
 
 Graph::Graph(const Graph& orig) {
@@ -21,4 +34,3 @@ Graph::Graph(const Graph& orig) {
 
 Graph::~Graph() {
 }
-

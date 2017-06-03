@@ -26,5 +26,6 @@ Randomized_Kruskal::~Randomized_Kruskal() {
 }
 
 Graph Randomized_Kruskal::generate_maze() {
-    return Graph();
+    // TODO: Actually implement this
+    return Graph(0,0);
 }
