@@ -27,8 +27,8 @@ User_Prompter::~User_Prompter() {
 }
 
 void User_Prompter::initial_prompt(int *width, int *length) {
-    cout << "Enter desired width: " << endl;
-    cin >> *width;
-    cout << "Enter desired length: " << endl;
-    cin >> *length;
+  cout << "Enter desired width: " << endl;
+  cin >> *width;
+  cout << "Enter desired length: " << endl;
+  cin >> *length;
 }

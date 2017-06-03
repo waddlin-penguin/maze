@@ -11,6 +11,9 @@
  * Created on June 1, 2017, 6:39 AM
  */
 
+#include <vector>
+using namespace std;
+
 #ifndef GRAPH_H
 #define GRAPH_H
 
@@ -27,8 +30,9 @@
  * left and the grid is a normal Cartesian graph.
  */
 class Node {
-public: 
-    Node();
+    friend class Graph;
+public:
+    Node(int arg_x, int arg_y);
     Node(const Node& orig);
     virtual ~Node();
 private:
@@ -41,8 +45,8 @@ private:
 };
 
 /* A graph encapsulates an entire maze. It models it as an undirected
- * acyclic graph. It only holds the root node, as that is all that's needed
- * to mathematically generate a maze. The maze is always drawn from the
+ * acyclic graph. But it holds a 2d vector of them so that we can safely
+ * delete neighbors without losing pointers. The maze is always drawn from the
  * bottom left and the exit could be anywhere.
  */
 class Graph {
@@ -51,7 +55,10 @@ public:
     Graph(const Graph& orig);
     virtual ~Graph();
 private:
-    Node *start;
+    vector<Node> CreateOneRow(int width, int vertical_index);
+    // Vector of vector of Nodes. Outer vector indexed by length, and
+    // inner vector indexed by width.
+    vector<vector<Node> > all_nodes;
 };
 
 #endif /* GRAPH_H */

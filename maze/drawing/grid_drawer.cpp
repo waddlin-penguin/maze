@@ -22,6 +22,6 @@ Grid_Drawer::Grid_Drawer(const Grid_Drawer& orig) {
 Grid_Drawer::~Grid_Drawer() {
 }
 
-void Grid_Drawer::draw_grid(Graph graph) {
-    
+void Grid_Drawer::draw_grid(Graph *graph) {
+
 }

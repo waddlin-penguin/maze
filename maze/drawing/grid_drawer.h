@@ -21,7 +21,7 @@ public:
     Grid_Drawer();
     Grid_Drawer(const Grid_Drawer& orig);
     virtual ~Grid_Drawer();
-    static void draw_grid(Graph graph);
+    static void draw_grid(Graph *graph);
 private:
 
 };

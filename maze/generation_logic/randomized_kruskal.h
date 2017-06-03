@@ -12,16 +12,18 @@
  */
 
 #include "maze_algorithm.h"
+#include "../graph/graph.h"
 
 #ifndef RANDOMIZED_KRUSKAL_H
 #define RANDOMIZED_KRUSKAL_H
 
-class Randomized_Kruskal: public Maze_Algorithm {
+class Randomized_Kruskal : public Maze_Algorithm {
 public:
     Randomized_Kruskal(int width, int length);
     Randomized_Kruskal(const Randomized_Kruskal& orig);
     virtual ~Randomized_Kruskal();
-    Graph generate_maze();
+    Graph* GenerateMaze(int width, int length);
+    Graph *maze;
 private:
     int width, length;
 };

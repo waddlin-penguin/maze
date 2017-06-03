@@ -21,7 +21,7 @@ public:
     Maze_Algorithm(int width, int length);
     Maze_Algorithm(const Maze_Algorithm& orig);
     virtual ~Maze_Algorithm();
-    virtual Graph generate_maze() = 0;
+    virtual Graph* GenerateMaze(int width, int length) = 0;
 private:
 
 };

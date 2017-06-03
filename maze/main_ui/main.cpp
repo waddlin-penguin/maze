@@ -25,19 +25,23 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    int width, length;
-    User_Prompter::initial_prompt(&width, &length);
-    
-    // Include functionality on choosing which maze algorithm.
-    
-    Maze_Algorithm *generator;
-    Randomized_Kruskal rk = Randomized_Kruskal(width, length);
-    generator = static_cast<Maze_Algorithm*>(&rk);
-    Graph test = generator->generate_maze();
+  int width, length;
+  User_Prompter::initial_prompt(&width, &length);
 
-    Grid_Drawer::draw_grid(test);
-    
-    return 0;
+  // Include functionality on choosing which maze algorithm.
+
+  Maze_Algorithm *generator;
+  Randomized_Kruskal rk = Randomized_Kruskal(width, length);
+  generator = static_cast<Maze_Algorithm*> (&rk);
+  cout << "finished initializing graph" << endl;
+
+  
+  
+  Grid_Drawer::draw_grid(rk.maze);
+
+  
+  
+  return 0;
 }
 
 
